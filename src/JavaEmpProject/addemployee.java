@@ -206,31 +206,17 @@ public class addemployee {
         		try {
         			
         			if(file.exists()) {
-        				
-        				/* oos = new ObjectOutputStream(new FileOutputStream(file,true)){
-        					
-        					protected void writeStreamHeader() throws java.io.IOException{
-        						reset();
-        					} 
-        				}; */
         				JOptionPane.showMessageDialog(null, "Employee with id "+Eid+" already exists");
         			}
         			else {
         				oos = new ObjectOutputStream(new FileOutputStream(file));
-        				JOptionPane.showMessageDialog(null, "sucess");
+        			
         			
         			}
         			
         			oos.writeObject(al);
-        			JOptionPane.showMessageDialog(null, "data added sucessfully");
+        			JOptionPane.showMessageDialog(null, "New Employee Data added sucessfully");
         			oos.close();
-        		/*	
-        			System.out.println(al);
-        			oos = new ObjectOutputStream(new FileOutputStream(file));
-        			oos.writeObject(al);
-        			oos.close();
-        			JOptionPane.showMessageDialog(null, "sucess");
-        			*/
       			    
         		}
         		catch(Exception ae) {
@@ -243,6 +229,11 @@ public class addemployee {
         saveButton.setFont(new Font("Times New Roman", Font.PLAIN, 20));
         saveButton.setBounds(640, 702, 232, 40);
         frame.getContentPane().add(saveButton);
+        
+        JLabel AddEmployeeLabel = new JLabel("Add Employee");
+        AddEmployeeLabel.setFont(new Font("Times New Roman", Font.PLAIN, 31));
+        AddEmployeeLabel.setBounds(362, 24, 198, 34);
+        frame.getContentPane().add(AddEmployeeLabel);
         
 	}
 

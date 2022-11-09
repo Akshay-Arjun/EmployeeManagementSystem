@@ -118,7 +118,7 @@ public class verifyEmployee {
         		
         		catch(Exception ae) {
         			JOptionPane.showMessageDialog(null, "Employee Is Not Working");
-        			//ae.printStackTrace();
+        			ae.printStackTrace();
         			}
         		}
         		

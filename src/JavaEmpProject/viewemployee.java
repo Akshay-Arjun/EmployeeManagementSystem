@@ -217,14 +217,14 @@ public class viewemployee {
 					}
 					
 					catch(EOFException ae1) {
-						//ae1.printStackTrace();
+						ae1.printStackTrace();
 					}
 					fin.close();
 					ois.close();
 				}
 		    		catch(Exception ae) {
 		    			JOptionPane.showMessageDialog(null, "Employee Not Found");
-		    			//ae.printStackTrace();
+		    			ae.printStackTrace();
 		    			}
 			
 			

@@ -172,38 +172,23 @@ public class Main {
         		try {
         			
         			if(file.exists()) {
-        				// ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("EmployeeDetails.dat"));
+        		
         				oos = new ObjectOutputStream(new FileOutputStream(file,true)){
         					
         					protected void writeStreamHeader() throws java.io.IOException{
         						reset();
         					}
         				};
-        				JOptionPane.showMessageDialog(null, "if sucess");
+        				//JOptionPane.showMessageDialog(null, "if sucess");
         			}
         			else {
         				oos = new ObjectOutputStream(new FileOutputStream(file));
-        				JOptionPane.showMessageDialog(null, "else sucess");
+        				//JOptionPane.showMessageDialog(null, "else sucess");
         			
         			} 
         			oos.writeObject(al);
-        			JOptionPane.showMessageDialog(null, "sucess");
-        			oos.close();
-        		/*	
-        			System.out.println(al);
-        			oos = new ObjectOutputStream(new FileOutputStream(file));
-        			oos.writeObject(al);
-        			oos.close();
-        			JOptionPane.showMessageDialog(null, "sucess");
-        			
-      			    
-        		       
-        			System.out.println(al);
-        			oos = new ObjectOutputStream(new FileOutputStream(file));
-        			oos.writeObject(al);
-        			oos.close();
-        			JOptionPane.showMessageDialog(null, "Registration Success");
-      			    */
+        			JOptionPane.showMessageDialog(null, "Registration sucess");
+        		
         		}
         		catch(Exception ae) {
         			ae.printStackTrace();
