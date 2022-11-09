@@ -230,6 +230,7 @@ public class editemployee {
 					            		 
 					            		al.add(new EmployeeAdd(Eid,Ename,Egender,Edesignation,Esalary,Enumber,Eemail));
 					            		System.out.println(al);
+					            		idField.setText("");
 					            		idVal.setText("");
 					            		nameVal.setText("");
 					            		genderVal.setText("");
@@ -237,14 +238,15 @@ public class editemployee {
 					            		salaryVal.setText("");
 					            		phonenumberVal.setText("");
 					            		emailVal.setText("");
-					        			JOptionPane.showMessageDialog(null, "Employee Is Edited"); 
+					        			
 					        			try {
 					            			
 					        				oos = new ObjectOutputStream(new FileOutputStream(file));
-				            				JOptionPane.showMessageDialog(null, "sucess");
 					            			oos.writeObject(al);
-					            			JOptionPane.showMessageDialog(null, "data added sucessfully");
-					            			oos.close();
+					            		    oos.close();
+					            		    JOptionPane.showMessageDialog(null, "Employee Is Edited"); 
+					            		    
+					      
 					            		
 					            		}
 					            		catch(Exception ae) {
@@ -254,7 +256,7 @@ public class editemployee {
 					        		}  
 					        		else  
 					        		{  
-					        			JOptionPane.showMessageDialog(null, "Employee Is Not Working To Delete");
+					        			JOptionPane.showMessageDialog(null, "Employee Not Edited Successfully");
 					        		}
 					        		
 					        		}  
@@ -274,7 +276,7 @@ public class editemployee {
 					}
 					
 					catch(EOFException ae1) {
-						//ae1.printStackTrace();
+						ae1.printStackTrace();
 					}
 					fin.close();
 					ois.close();
