@@ -1,2 +1,2 @@
 Employee details will be stored in this folder. 
-DO NO DELETE THIS FOLDER.
+DO NOT DELETE THIS FOLDER.
